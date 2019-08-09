@@ -1,4 +1,4 @@
-Readme.md
+
 This is a simple application which is aimed at understanding and putting together various pieces of the puzzle. 
 
 Bird’s Eye View:
