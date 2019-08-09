@@ -1,0 +1,5 @@
+Flask==0.10.1
+connexion>=2.0.0rc3
+swagger-ui-bundle
+redis
+Redis
