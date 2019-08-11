@@ -78,12 +78,11 @@ swagger: "2"
 info:
   description: This is the swagger file that goes with our server code
   version: "1.0"
-  title: Swagger ReST Article
+  title: Swagger ReST App  
 consumes:
   - application/json
 produces:
   - application/json
-
 basePath: /api
 
 # Paths supported by the server application
@@ -93,22 +92,22 @@ paths:
       operationId: people.read_all
       tags:
         - People
-      summary: Read the entire list of people
-      description: Read the list of people
+      summary: Read whole list of employees
+      description: Read the list of employees
       parameters:
         - name: length
           in: query
           type: integer
-          description: Number of people to get from people
+          description: Number of employees to get from people
           required: false
         - name: offset
           in: query
           type: integer
-          description: Offset from beginning of list where to start gathering people
+          description: Offset from beginning of list where to start gathering employee
           required: false
       responses:
         200:
-          description: Successfully read people list operation
+          description: Successfully read employee list operation
           schema:
             type: array
             items:
@@ -120,7 +119,8 @@ paths:
                 timestamp:
                   type: string
 
-paths tell the beginning of where all the API URL endpoints are defined. The /people value indented under that defines the start of where all the /api/people URL endpoints will be defined. The get: indented under that defines the section of definitions associated with an HTTP GET request to the /api/people URL endpoint. This goes on for the entire configuration and the file is quite self-explanatory.
+
+Paths tell the beginning of where all the API URL endpoints are defined. The /people value indented under that defines the start of where all the /api/people URL endpoints will be defined. The get: indented under that defines the section of definitions associated with an HTTP GET request to the /api/people URL endpoint. This goes on for the entire configuration and the file is quite self-explanatory.
 
 Now we need to have a handler for people endpoint. In connexion configuration we have people module and the read function within the module when the API gets an HTTP request for GET /api/people. This means a people.py module must exist and contain a read() function.
 
