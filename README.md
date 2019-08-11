@@ -126,15 +126,15 @@ Now we need to have a handler for people endpoint. In connexion configuration we
 
 We also have a single page web application demonstrating the use of the API. This will all be handled by AJAX calls from JavaScript to the people API URL endpoints. Home.html file pulls in the external normalize.min.css file, which is a CSS reset file to normalize the formatting of elements across browsers. It also pulls in the external jquery-3.3.1.min.js file to provide the jQuery functionality you’ll use to create the single-page application interactivity.
 
-#Redis: As described on its website:
-
+# Redis: 
+As described on its website:
 Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets.
 
 The app makes use of Redis as in memory data structure store in which information of persons can be stored. It can also be written to disk using command bgsave(). The python module redis-py is used for making interaction between our app and redis possible.
 
 Redis is preferred because it is open source, very fast in memory database and provides several features over other NoSQL databases.
 
-#Docker:
+# Docker:
 As described officially:
 
 Docker is a set of coupled software-as-a-service and platform-as-a-service products that use operating-system-level virtualization to develop and deliver software in packages called containers. 
