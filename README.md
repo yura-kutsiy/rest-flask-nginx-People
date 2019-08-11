@@ -85,7 +85,7 @@ produces:
   - application/json
 basePath: /api
 
-# Paths supported by the server application
+-->Paths supported by the server application
 paths:
   /people:
     get:
@@ -126,7 +126,7 @@ Now we need to have a handler for people endpoint. In connexion configuration we
 
 We also have a single page web application demonstrating the use of the API. This will all be handled by AJAX calls from JavaScript to the people API URL endpoints. Home.html file pulls in the external normalize.min.css file, which is a CSS reset file to normalize the formatting of elements across browsers. It also pulls in the external jquery-3.3.1.min.js file to provide the jQuery functionality you’ll use to create the single-page application interactivity.
 
-Redis: As described on its website:
+#Redis: As described on its website:
 
 Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets.
 
@@ -134,7 +134,7 @@ The app makes use of Redis as in memory data structure store in which informatio
 
 Redis is preferred because it is open source, very fast in memory database and provides several features over other NoSQL databases.
 
-Docker:
+#Docker:
 As described officially:
 
 Docker is a set of coupled software-as-a-service and platform-as-a-service products that use operating-system-level virtualization to develop and deliver software in packages called containers. 
@@ -169,7 +169,7 @@ So the incoming requests @ port 8080 from nginx travel to port 80 on web_nw to h
 
 Now the flask app needs to connect to the redis which is on another user defined network db_nw and listens on port 6379 and has a dedicated IP assigned to container named m-nginx_db_1which is built using already available redis image: redis-alpine. In the people.py file defining the functionality of REST API we have connection established to redis container: 
 
-r=redis.StrictRedis(db=1,host=”m-nginx_db_1”, port=6379…)
+#r=redis.StrictRedis(db=1,host=”m-nginx_db_1”, port=6379…)
 So the RESTAPI (people.py) has all the information regarding IP and port to connect to the redis listening @port 6379 of db_nw bridge network. 
 
 Docker compose is used to build and run the application:
